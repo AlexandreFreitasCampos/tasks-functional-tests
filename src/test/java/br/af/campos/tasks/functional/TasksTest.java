@@ -19,27 +19,27 @@ public class TasksTest extends DriverFactory {
 //	}
 	
 
-//	@Test
-//	public void deveSalvarTarefaComSucesso() {
-//		try {
-//			getDriver();
-//			// Clicar em Add Todo
-//			getDriver().findElement(By.xpath("//a[@id='addTodo']")).click();
-//			// Escrever descrição
-//			getDriver().findElement(xpath("//input[@id='task']")).sendKeys("Tarefa via Selenium");
-//			// Escrever a data
-//			getDriver().findElement(By.xpath("//input[@id='dueDate']")).sendKeys("10/10/2024");
-//			// Clicar em salvar
-//			getDriver().findElement(By.xpath("//input[@id='saveButton']")).click();
-//			// Validar mensagem de sucesso
-//			String mensagem = getDriver().findElement(By.id("message")).getText();
-//			assertEquals("Success!", mensagem);
-//		} finally {
-//			// Fechar o browser
-//			killDriver();
-//		}
-//
-//	}
+	@Test
+	public void deveSalvarTarefaComSucesso() {
+		try {
+			getDriver();
+			// Clicar em Add Todo
+			getDriver().findElement(By.xpath("//a[@id='addTodo']")).click();
+			// Escrever descrição
+			getDriver().findElement(xpath("//input[@id='task']")).sendKeys("Tarefa via Selenium");
+			// Escrever a data
+			getDriver().findElement(By.xpath("//input[@id='dueDate']")).sendKeys("10/10/2024");
+			// Clicar em salvar
+			getDriver().findElement(By.xpath("//input[@id='saveButton']")).click();
+			// Validar mensagem de sucesso
+			String mensagem = getDriver().findElement(By.id("message")).getText();
+			assertEquals("Success!", mensagem);
+		} finally {
+			// Fechar o browser
+			killDriver();
+		}
+
+	}
 
 	@Test
 	public void naoDeveSalvarTarefaComDataPassada() {
